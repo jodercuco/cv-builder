@@ -3,7 +3,7 @@ import React from "react";
 
 const NameForm = ({ cvData, setCvData }) => {
   return (
-    <section>
+    <section className="name-section">
       <h3>Nombre</h3>
       <input
         type="text"

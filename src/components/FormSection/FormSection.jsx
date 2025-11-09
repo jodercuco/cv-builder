@@ -15,7 +15,7 @@ import PhotoUpload from "./Forms/PhotoUpload";
 export const FormSection = ({ cvData, setCvData, cvRef }) => {
   return (
     <div className='forms-container'>
-        <h1>Crea tu formulario</h1>
+        <h1>CREA TU CURRICULUM</h1>
 
         <div className='forms'>
           <div className="name-photo-container">

@@ -27,21 +27,31 @@ const ExperiencesForm = ({ cvData, setCvData }) => {
         <div key={index} className="experience-inputs">
           <h5>Experiencia {index + 1}</h5>
 
-          <div className="inputs-group">
-            <input
-              type="text"
-              placeholder="Puesto de trabajo..."
-              value={exp.title}
-              onChange={(e) => handleChange(index, "title", e.target.value)}
-            />
+          <div className="big-inputs-group">
 
-            <input
-              type="text"
-              placeholder="Meses o años de experiencia..."
-              value={exp.time}
-              onChange={(e) => handleChange(index, "time", e.target.value)}
-            />
+            <div className="inputs-group">
+              <input
+                type="text"
+                placeholder="Puesto de trabajo..."
+                value={exp.title}
+                onChange={(e) => handleChange(index, "title", e.target.value)}
+              />
 
+              <input
+                type="text"
+                placeholder="Meses o años de experiencia..."
+                value={exp.time}
+                onChange={(e) => handleChange(index, "time", e.target.value)}
+              />
+
+                          <button
+              onClick={() => removeExperiences(index)}
+              className="delete-button"
+            >
+              Eliminar
+            </button>
+
+            </div>
             <textarea
               type="text"
               placeholder="Descripción de las tareas realizadas..."
@@ -49,12 +59,7 @@ const ExperiencesForm = ({ cvData, setCvData }) => {
               onChange={(e) => handleChange(index, "description", e.target.value)}
             />
 
-            <button
-              onClick={() => removeExperiences(index)}
-              className="delete-button"
-            >
-              Eliminar
-            </button>
+
           </div>
         </div>
       ))}

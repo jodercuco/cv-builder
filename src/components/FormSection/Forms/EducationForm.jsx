@@ -26,7 +26,7 @@ const EducationForm = ({ cvData, setCvData }) => {
 
       {educationList.map((edu, index) => (
         <div key={index}>
-          <h5>Formación {index + 1}</h5>
+          <h5>Educación {index + 1}</h5>
 
           <div className="inputs-group">
             <input

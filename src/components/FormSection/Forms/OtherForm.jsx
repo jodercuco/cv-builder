@@ -26,20 +26,23 @@ const OthersForm = ({ cvData, setCvData }) => {
         <div key={index} className="other-inputs">
           <h5>Otro {index + 1}</h5> 
 
-          <div className="inputs-group">
-            <input
-              type="text"
-              placeholder="Título"
-              value={oth.title}
-              onChange={(e) => handleChange(index, "title", e.target.value)}
-            />
-            <textarea
-              type="text"
-              placeholder="Descripción"
-              value={oth.description}
-              onChange={(e) => handleChange(index, "description", e.target.value)}
-            />
-            <button onClick={() => removeOther(index)} className="delete-button">Eliminar</button>
+          <div className="big-inputs-group">
+            <div className="inputs-group">
+              <input
+                type="text"
+                placeholder="Título"
+                value={oth.title}
+                onChange={(e) => handleChange(index, "title", e.target.value)}
+              />
+            </div>
+              <textarea
+                type="text"
+                placeholder="Descripción"
+                value={oth.description}
+                onChange={(e) => handleChange(index, "description", e.target.value)}
+              />
+              <button onClick={() => removeOther(index)} className="delete-button">Eliminar</button>
+            
           </div>
         </div>
       ))}

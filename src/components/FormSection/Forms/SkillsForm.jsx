@@ -27,14 +27,17 @@ const SkillForm = ({ cvData, setCvData }) => {
       {skillList.map((ski, index) => (
         <div key={index} className="skill-inputs">
           <h5>Habilidad {index + 1}</h5>
+
+          <div className="inputs-group">
           <input
             type="text"
-            placeholder="Título o Grado"
+            placeholder="Habilidad"
             value={ski.title}
             onChange={(e) => handleChange(index, "title", e.target.value)}
           />
 
           <button onClick={() => removeSkill(index)} className="delete-button">Eliminar</button>
+          </div>
         </div>
       ))}
 

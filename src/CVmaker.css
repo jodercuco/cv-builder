@@ -1,4 +1,5 @@
 
+
 *{
   box-sizing: border-box; /* ¡La magia! */
 }
@@ -19,6 +20,8 @@
     height: 100vh;
     border-right: 1px solid #ddd;
     background-color: #3d479a;
+    scrollbar-color: #4992ff #3d479a;
+    
 }
 
 .forms-container h1{
@@ -48,12 +51,13 @@
 
 /*ESTILOS UNIVERSALES*/ 
 
-/*
-section {
-    border: 1px solid #ccc;
 
+section {
+    /*border: 1px solid #ccc;*/
+    display: grid;
+    gap: 20px;
 }
-*/
+
 
 input {
     border-radius: 3px;
@@ -77,7 +81,9 @@ textarea {
     padding: 10px;
     resize: vertical;
     width: 100%;
-    min-height: 150px;
+    min-height: 80px;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -99,10 +105,13 @@ textarea::placeholder, input::placeholder {
 
 
 /**CONTENEDOR DE CAMPO NOMBRE Y PHOTO**/
+.name-section{
+    width: 49%;
+}
+
 .name-photo-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 
@@ -111,7 +120,7 @@ textarea::placeholder, input::placeholder {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-
+  margin: auto auto;
 }
 
 .photo-upload div {
@@ -135,7 +144,7 @@ textarea::placeholder, input::placeholder {
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
-  border-radius: 8px;
+  border-radius: 3px;
   cursor: pointer;
   width: 100%;
   transition: background 0.2s;
@@ -150,18 +159,23 @@ textarea::placeholder, input::placeholder {
 
 /**BOTONES - PERFECTO**/
 .add-button{
-    
-    padding: 5px 10px;
+    padding: 10px 10px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.add-button:hover{
+    background-color: #006ee4;
 }
 
 .delete-button{
-    padding: 5px 10px;
+    padding: 10px 10px;
+    transition: background 0.3s;
     background-color: #dc3545;
     color: white;
     border: none;
@@ -170,10 +184,14 @@ textarea::placeholder, input::placeholder {
     font-size: 14px;
 }
 
+.delete-button:hover{
+    background-color: #b92635;
+}
+
     /*BOTON DESCARGAR*/
     .download-button {
-        
-        padding: 10px 15px;
+        padding: 15px 15px;
+        transition: background 0.3s;
         background-color: #2cd815;
         color: white;
         border: none;
@@ -190,16 +208,19 @@ textarea::placeholder, input::placeholder {
 
 
 /*GRUPO DE INPUTS GLOBAL*/
+.big-inputs-group{
+    gap: 10px;
+    display: grid;
+}
+
 .inputs-group{
     display: flex;
     gap: 10px;
 }
 
-/*GRUPO INPUTS DE EDUCACION*/
 
 
-
-/*CONTACTO*/
+/*CONTACTO GRUPO DE LOS 4 CAMPOS*/
 
 .contact-inputs{
     display: grid;
@@ -209,11 +230,9 @@ textarea::placeholder, input::placeholder {
 
 
 
-
-
-
-
 /*EDUCATION*/
-
+.education-age-input{
+    width: 70px;
+}
 
 
