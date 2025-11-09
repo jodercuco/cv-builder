@@ -1,0 +1,219 @@
+
+*{
+  box-sizing: border-box; /* ¡La magia! */
+}
+
+/*CONTENEDOR RAIZ*/
+.app-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    
+}
+
+/*COLUMNA IZQUIERA DE FORMULARIOS*/
+.forms-container {
+    width: 35%;
+    color: white;
+    overflow: auto;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    background-color: #3d479a;
+}
+
+.forms-container h1{
+    text-align: center;
+}
+
+/*CONJUNTO DE FORMULARIOS*/
+.forms{
+    padding: 25px;
+    display: grid;
+    gap: 20px;
+}
+
+/*ENCABEZADOS*/
+.forms h3 {
+    margin: 0px 0px 5px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*SUBTITULOS DE ENCABEZADOS*/
+.forms h5 {
+    margin: 0px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*ESTILOS UNIVERSALES*/ 
+
+/*
+section {
+    border: 1px solid #ccc;
+
+}
+*/
+
+input {
+    border-radius: 3px;
+    border-width: 0px 0px 4px 0px;
+    border-style: solid;
+    border-color: #6bc1ff;
+    padding: 10px;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background-color: rgb(223, 240, 255);
+}
+
+textarea {
+    border-radius: 3px;
+    border-width: 0px 0px 4px 0px;
+    border-style: solid;
+    border-color: #6bc1ff;
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+    min-height: 150px;
+}
+
+
+
+textarea::placeholder, input::placeholder {
+  /* Aquí defines la fuente que quieres para el placeholder */
+  font-family: 'Montserrat', sans-serif; 
+  
+  /* Opcional: También puedes cambiar el color */
+  color: #a0a0a0; 
+  
+  /* Opcional: También puedes cambiar el tamaño */
+  font-size: 14px;
+}
+
+
+
+/*FIN ESTILOS UNIVERSALES*/
+
+
+/**CONTENEDOR DE CAMPO NOMBRE Y PHOTO**/
+.name-photo-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+ /*FOTO - PERFECTO*/
+.photo-upload {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.photo-upload div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.preview-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+/****/
+
+
+/**BOTONES - PERFECTO**/
+.add-button{
+    
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button{
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    /*BOTON DESCARGAR*/
+    .download-button {
+        
+        padding: 10px 15px;
+        background-color: #2cd815;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .download-button:hover {
+        background-color: #28a20f;
+    }
+
+/*FIN BOTONES*/
+
+
+/*GRUPO DE INPUTS GLOBAL*/
+.inputs-group{
+    display: flex;
+    gap: 10px;
+}
+
+/*GRUPO INPUTS DE EDUCACION*/
+
+
+
+/*CONTACTO*/
+
+.contact-inputs{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+
+
+
+/*EDUCATION*/
+
+
+
