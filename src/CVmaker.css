@@ -4,12 +4,14 @@
   box-sizing: border-box; /* ¡La magia! */
 }
 
+
+
 /*CONTENEDOR RAIZ*/
 .app-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    
+
 }
 
 /*COLUMNA IZQUIERA DE FORMULARIOS*/
@@ -236,3 +238,13 @@ textarea::placeholder, input::placeholder {
 }
 
 
+/********************/
+/***IMAGEN PREVIEW***/
+/********************/
+.cv-thumbnail-container {
+    width: 100%;
+    height: min-content;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: auto auto;
+}

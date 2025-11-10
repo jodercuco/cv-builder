@@ -4,16 +4,17 @@
 .cv-container {
   display: grid;
   grid-template-columns: 30% 70%;
-  width: 794px;      /* ancho A4 */
-  height: 1123px;    /* alto A4 */
+  width: 49.625rem;  /*794 - 49.625*/    /* ancho A4 */
+  height: 70.1875rem;  /*1123-70.1875*/  /* alto A4 */
   background: white;
   font-family: "Outfit", "Helvetica", sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   overflow: auto;
   border-radius: 4px;
-  margin: 0 auto;
-  scale: 0.7;  
-  transform-origin: top center;
+  position: absolute;
+  top: -9999px;
+  scale: 1;  
+  transform-origin: top left;
   
 }
 
@@ -35,26 +36,26 @@ img{
   display: flex;
   flex-direction: column;
   background-color: #D84315;
-  padding: 25px;
+  padding: 1.5625rem; /*25-1.5625*/
   align-items: start;
   width: 100%;
   box-sizing: border-box;
 }
 
 .header h3 {
-  font-size: 20px;
-  margin: 15px 0px 0px 0px;
+  font-size: 1.25rem; /*20-1.25*/
+  margin: 0.9375rem 0px 0px 0px;  /*15-0.9375*/
   color: #ececec;
 }
 
 .header p {
-    margin: 10px 0px 10px 0px;
-    font-size: 14px;
+    margin: 0.0625rem 0px 10px 0px; /*10-0.0625*/
+    font-size: 0.875rem; /*14-0.875*/
     
 }
 
 .header i {
-  font-size: 12px;
+  font-size: 0.75rem; /*0.75*/
 }
 
 .header hr {
@@ -63,7 +64,7 @@ img{
   height: 3px;
   border-radius: 5px;
   background-color: rgb(241, 241, 241);
-  margin: 8px 0px 0px 0;
+  margin: 0.5rem 0px 0px 0px; /*8-0.5*/
 }
 
 .header ul {
@@ -73,7 +74,7 @@ img{
 }
 
 .header li {
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem; /*4-0.25*/
 }
 
 .header a {
@@ -108,15 +109,15 @@ img{
 /* ====== COLUMNA DERECHA (FORMACIÓN Y CONTENIDO) ====== */
 .formation {
   background-color: #D0EBE9;
-  padding: 30px 20px;
+  padding: 1.875rem 1.25rem; /*30-1.875 20-1.25*/
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .formation h1 {
-  font-size: 48px;
-  margin: 0 0 15px 0;
+  font-size: 3rem; /*48-3*/
+  margin: 0 0 0.9375rem 0; /*15-0.9375*/
   color: #1a2c3b;
 }
 
@@ -126,48 +127,48 @@ img{
   height: 3px;
   border-radius: 5px;
   background-color: rgb(70, 119, 175);
-  margin: 10px 0 15px 0;
+  margin: 0.0625rem 0 0.9375rem 0; /*10-0.0625 15-0.9375*/
 }
 
 .formation h3 {
-  font-size: 26px;
-  margin: 25px 0 8px 5px;
+  font-size: 1.625rem; /*26-1.625*/
+  margin: 1.5625rem 0 0.5rem 0.3125rem; /*25-1.5625  8-0.5 5-0.3125*/
   color: #1a2c3b;
 }
 
 .formation h4 {
-  font-size: 20px;
-  margin: 15px 0 5px 0;
+  font-size: 1.25rem; /*20-1.25*/
+  margin: 0.9375rem 0 0.3125rem 0; /*15-0.9375  5-0.3125*/
   color: #333;
 }
 
 .formation p {
-  font-size: 16px;
+  font-size: 1rem; 
   line-height: 1.2;
-  margin: 4px 0;
+  margin: 0.25rem 0; 
   color: #222;
   text-align: justify;
   white-space: pre-line;
 }
 
 .formation ul {
-  padding-left: 20px;
+  padding-left: 1.25rem; /*20-1.25*/
 }
 
 .experience-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 0.0625rem; /*10-0.0625*/
+  margin-bottom: 0.0625rem; /*10-0.0625*/
 }
 
 .experience-item h2 {
-  font-size: 20px;
+  font-size: 1.25rem; /*20-1,25*/
   margin: 0;
 }
 
 .date-range {
-  font-size: 16px;
+  font-size: 1rem; /*16-1*/
   color: #666;
 }
 

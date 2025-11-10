@@ -1,11 +1,23 @@
 import React from "react";
 
 const LanguagesForm = ({ cvData, setCvData }) => {
-  const languagesList = cvData.languages || [];
+  // ✅ Protección correcta
+  const languagesList = cvData.languages || []; 
 
   const handleChange = (index, field, value) => {
+    // 1. Clonar el array de idiomas (copia superficial)
     const updatedLanguages = [...languagesList];
-    updatedLanguages[index][field] = value;
+    
+    // 2. 💡 CORRECCIÓN: Clonar el objeto específico que vamos a modificar
+    const updatedItem = { ...updatedLanguages[index] };
+    
+    // 3. Modificar la copia del objeto
+    updatedItem[field] = value;
+    
+    // 4. Reemplazar el objeto antiguo en el array con el objeto modificado
+    updatedLanguages[index] = updatedItem;
+
+    // 5. Establecer el nuevo estado
     setCvData({ ...cvData, languages: updatedLanguages });
   };
 

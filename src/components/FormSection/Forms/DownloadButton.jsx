@@ -26,6 +26,8 @@ export const DownloadButton = ({ cvRef }) => {
               height: 297mm !important;
               box-shadow: none !important;
               margin: 0 !important;
+              position: relative; !important;
+              top: 0px;
             }
             
             /* Ocultar el formulario al imprimir */

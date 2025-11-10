@@ -1,12 +1,24 @@
-// AboutMeForm.jsx
+// OthersForm.jsx
 import React from "react";
 
 const OthersForm = ({ cvData, setCvData }) => {
-  // Aseguramos que other sea siempre un array
+  // ✅ Protección correcta
   const otherList = cvData.other || [];
+
   const handleChange = (index, field, value) => {
+    // 1. Clonar el array de otros elementos (copia superficial)
     const updatedOther = [...otherList];
-    updatedOther[index][field] = value;
+
+    // 2. 💡 CORRECCIÓN: Clonar el objeto específico que vamos a modificar
+    const updatedItem = { ...updatedOther[index] };
+
+    // 3. Modificar la copia del objeto
+    updatedItem[field] = value;
+
+    // 4. Reemplazar el objeto antiguo en el array con el objeto modificado
+    updatedOther[index] = updatedItem;
+
+    // 5. Establecer el nuevo estado
     setCvData({ ...cvData, other: updatedOther });
   };
 
@@ -14,6 +26,7 @@ const OthersForm = ({ cvData, setCvData }) => {
     const newOther = { title: "", description: "" };
     setCvData({ ...cvData, other: [...otherList, newOther] });
   };
+
   const removeOther = (index) => {
     const updatedOther = otherList.filter((_, i) => i !== index);
     setCvData({ ...cvData, other: updatedOther });

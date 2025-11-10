@@ -1,3 +1,9 @@
+import React from "react";
+import useLocalStorage from '../../../hooks/useLocalStorage';
+
+
+
+
 const ContactForm = ({ cvData, setCvData }) => {
   const contact = cvData.contact || {}; // protección por si no existe aún
 

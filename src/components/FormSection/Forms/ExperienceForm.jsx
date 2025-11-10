@@ -1,11 +1,23 @@
 import React from "react";
 
 const ExperiencesForm = ({ cvData, setCvData }) => {
-  const experiencesList = cvData.experiences || [];
+  // ✅ Protección correcta contra undefined
+  const experiencesList = cvData.experiences || []; 
 
   const handleChange = (index, field, value) => {
+    // 1. Clonar el array de experiencias (copia superficial)
     const updatedExperiences = [...experiencesList];
-    updatedExperiences[index][field] = value;
+    
+    // 2. 💡 CORRECCIÓN: Clonar el objeto específico que vamos a modificar
+    const updatedItem = { ...updatedExperiences[index] };
+    
+    // 3. Modificar la copia del objeto
+    updatedItem[field] = value;
+    
+    // 4. Reemplazar el objeto antiguo en el array con el objeto modificado
+    updatedExperiences[index] = updatedItem;
+
+    // 5. Establecer el nuevo estado (lo cual dispara el guardado en useLocalStorage)
     setCvData({ ...cvData, experiences: updatedExperiences });
   };
 

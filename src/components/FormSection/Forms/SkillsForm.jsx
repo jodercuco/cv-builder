@@ -1,17 +1,30 @@
 import React from "react";
 
 const SkillForm = ({ cvData, setCvData }) => {
-  // Aseguramos que education sea siempre un array
+  // ✅ Protección correcta
   const skillList = cvData.skills || [];
 
   const handleChange = (index, field, value) => {
+    // 1. Clonar el array de habilidades (copia superficial)
     const updatedSkill = [...skillList];
-    updatedSkill[index][field] = value;
+
+    // 2. 💡 CORRECCIÓN: Clonar el objeto específico que vamos a modificar
+    const updatedItem = { ...updatedSkill[index] };
+    
+    // 3. Modificar la copia del objeto
+    updatedItem[field] = value;
+    
+    // 4. Reemplazar el objeto antiguo en el array con el objeto modificado
+    updatedSkill[index] = updatedItem;
+
+    // 5. Establecer el nuevo estado
     setCvData({ ...cvData, skills: updatedSkill });
   };
 
   const addSkill = () => {
-    const newSkill = { title: "", center: "", year: "" };
+    // Nota: Los campos iniciales title, center, year no coinciden con el uso
+    // actual del formulario (solo title), pero la estructura es correcta.
+    const newSkill = { title: "", center: "", year: "" }; 
     setCvData({ ...cvData, skills: [...skillList, newSkill] });
   };
 

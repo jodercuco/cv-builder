@@ -5,10 +5,21 @@ const EducationForm = ({ cvData, setCvData }) => {
   const educationList = cvData.education || [];
 
   const handleChange = (index, field, value) => {
-    const updatedEducation = [...educationList];
-    updatedEducation[index][field] = value;
-    setCvData({ ...cvData, education: updatedEducation });
-  };
+  // 1. Clonar el array de educación (shallow copy)
+  const updatedEducation = [...educationList];
+  
+  // 2. Clonar el objeto específico que vamos a modificar (deep copy para ese item)
+  const updatedItem = { ...updatedEducation[index] };
+  
+  // 3. Modificar la copia del objeto
+  updatedItem[field] = value;
+  
+  // 4. Reemplazar el objeto antiguo en el array con el objeto modificado (inmutabilidad)
+  updatedEducation[index] = updatedItem;
+
+  // 5. Establecer el nuevo estado
+  setCvData({ ...cvData, education: updatedEducation });
+};
 
   const addEducation = () => {
     const newEducation = { title: "", center: "", year: "" };
